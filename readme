@@ -1,0 +1,81 @@
+# Bouncy Castle Cryptography Library
+
+A Java cryptography library implementing secure cryptographic operations using the Bouncy Castle API. This library provides a comprehensive set of cryptographic functions with a focus on security and ease of use.
+
+## Features
+
+- Symmetric Encryption (AES-GCM)
+- Asymmetric Encryption (RSA with OAEP padding)
+- Digital Signatures (ECDSA)
+- Secure Hashing (SHA-256)
+- Key Generation (AES, RSA, ECDSA)
+- Built-in security best practices
+
+## Requirements
+
+- Java 21
+- Maven 3.11.0+
+- Bouncy Castle Provider 1.78.1
+
+## Installation
+
+Add these dependencies to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcprov-jdk18on</artifactId>
+    <version>1.78.1</version>
+</dependency>
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcpkix-jdk18on</artifactId>
+    <version>1.78.1</version>
+</dependency>
+
+Usage Examples
+Symmetric Encryption (AES-GCM
+
+SecretKey key = KeyGeneration.generateSymmetricKey();
+String originalText = "Secret message";
+byte[] encrypted = SymmetricEncryption.encrypt(originalText, key);
+String decrypted = SymmetricEncryption.decrypt(encrypted, key);
+
+Asymmetric Encryption (RSA)
+
+KeyPair keyPair = KeyGeneration.generateAsymmetricKeysRSA();
+String originalText = "Secret message";
+byte[] encrypted = AsymmetricEncryption.encrypt(originalText, keyPair.getPublic());
+String decrypted = AsymmetricEncryption.decrypt(encrypted, keyPair.getPrivate());
+
+Digital Signatures (ECDSA)
+
+KeyPair keyPair = KeyGeneration.generateAsymmetricKeysECDSA();
+String data = "Message to sign";
+byte[] signature = DigitalSignature.sign(data, keyPair.getPrivate());
+boolean isValid = DigitalSignature.verify(data, signature, keyPair.getPublic());
+
+Hashing (SHA-256)
+
+String data = "Data to hash";
+String hash = Hashing.generateSha256(data);
+
+Security Features
+AES-GCM for authenticated encryption
+RSA with OAEP padding for asymmetric encryption
+ECDSA with SHA-256 for digital signatures
+Secure random number generation
+Standard security parameters (2048-bit RSA, 256-bit AES)
+
+Building and Testing
+Build the project:
+
+mvn clean package
+
+Run tests:
+
+mvn test
+
+
+
+
