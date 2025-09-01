@@ -10,7 +10,7 @@ public class DigitalSignatureTest {
     @Test
     void testSignAndVerify() throws Exception {
         KeyPair keyPair = KeyGeneration.generateAsymmetricKeysECDSA();
-        String data = "This data needs to be signed.";
+        String data = "My test need to be signed.";
 
         byte[] signature = DigitalSignature.sign(data, keyPair.getPrivate());
         boolean isVerified = DigitalSignature.verify(data, signature, keyPair.getPublic());

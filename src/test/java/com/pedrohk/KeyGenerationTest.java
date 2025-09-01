@@ -14,7 +14,7 @@ public class KeyGenerationTest {
         SecretKey secretKey = KeyGeneration.generateSymmetricKey();
         assertNotNull(secretKey);
         assertEquals("AES", secretKey.getAlgorithm());
-        assertEquals(32, secretKey.getEncoded().length); // 256 bits
+        assertEquals(32, secretKey.getEncoded().length);
     }
 
     @Test

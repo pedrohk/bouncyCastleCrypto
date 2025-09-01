@@ -10,7 +10,7 @@ public class SymmetricEncryptionTest {
     @Test
     void testEncryptDecrypt() throws Exception {
         SecretKey key = KeyGeneration.generateSymmetricKey();
-        String originalText = "This is a secret message for symmetric encryption.";
+        String originalText = "This is my secret message for symmetric encryption.";
 
         byte[] encrypted = SymmetricEncryption.encrypt(originalText, key);
         String decrypted = SymmetricEncryption.decrypt(encrypted, key);

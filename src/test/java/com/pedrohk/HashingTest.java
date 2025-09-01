@@ -8,13 +8,13 @@ public class HashingTest {
 
     @Test
     void testGenerateSha256() throws Exception {
-        String data = "This is the data to be hashed.";
+        String data = "My test to be hashed.";
         String hash = Hashing.generateSha256(data);
 
         assertNotNull(hash);
         assertEquals(64, hash.length());
 
-        String expectedHash = "1adb557517668f2634c85649901434af87cef3625e3a2fd9f80638c719f76114";
-        assertEquals(expectedHash, Hashing.generateSha256("This is the data to be hashed."));
+        String expectedHash = "7503da2239b1e5cc96b30213a80acb6658ed23b1ab9b451476124c908607f6b1";
+        assertEquals(expectedHash, Hashing.generateSha256("My test to be hashed."));
     }
 }
