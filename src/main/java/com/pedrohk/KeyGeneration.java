@@ -1,16 +1,16 @@
 package com.pedrohk;
 
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import java.security.InvalidAlgorithmParameterException;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.security.SecureRandom;
 import java.security.spec.ECGenParameterSpec;
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
-import java.security.InvalidAlgorithmParameterException;
-
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 public class KeyGeneration {
 

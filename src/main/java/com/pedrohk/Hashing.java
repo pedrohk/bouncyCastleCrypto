@@ -1,8 +1,9 @@
 package com.pedrohk;
 
-import java.security.MessageDigest;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.util.encoders.Hex;
+
+import java.security.MessageDigest;
 
 public class Hashing {
 

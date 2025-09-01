@@ -1,10 +1,10 @@
 package com.pedrohk;
 
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+
 import javax.crypto.Cipher;
-import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.PublicKey;
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 public class AsymmetricEncryption {
 

@@ -1,9 +1,10 @@
 package com.pedrohk;
 
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.Signature;
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 public class DigitalSignature {
 

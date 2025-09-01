@@ -1,10 +1,11 @@
 package com.pedrohk;
 
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.GCMParameterSpec;
 import java.security.SecureRandom;
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 public class SymmetricEncryption {
 
